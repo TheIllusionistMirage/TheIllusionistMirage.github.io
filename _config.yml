@@ -16,8 +16,8 @@ url:              https://theillusionistmirage.github.io/
 baseurl:          /
 
 author:
-  name:           'Mark Otto'
-  url:            https://twitter.com/mdo
+  name:           'Koushtav Chakrabarty'
+  url:            https://fleptic.eu
 
 paginate:         5
 
@@ -25,5 +25,5 @@ paginate:         5
 version:          2.1.0
 
 github:
-  repo:           https://github.com/poole/hyde
-  url:            https://theillusionistmirage.github.io
+  repo:           https://github.com/TheIllusionstMirage
+  url:            https://github.com/TheIllusionstMirage
