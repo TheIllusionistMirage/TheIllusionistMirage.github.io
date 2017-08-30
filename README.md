@@ -7,6 +7,15 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 ### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+```
+#include <iostream>
+
+int main()
+{
+  std::cout << "Hello, World!" << std::endl;
+  return 0;
+}
+```
 
 ```markdown
 Syntax highlighted code block
