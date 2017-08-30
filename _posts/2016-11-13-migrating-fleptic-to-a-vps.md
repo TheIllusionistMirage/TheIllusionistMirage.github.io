@@ -17,6 +17,6 @@ In case you're a student currently enrolled at a school/university, go and get y
 [GitHub Student Developer Pack]: https://education.github.com/pack
 [DigitalOcean]: https://digitalocean.com
 
-**P.S.** I've already written a [new post](https://fleptic.eu/vps/jekyll/apache/fedora/2016/11/21/setup-your-personal-site-from-scratch-using-linux-apache-and-jekyll.html) detailing the process. Check it out! :wink:
+**P.S.** I've already written a [new post]({{ site.url }}/vps/jekyll/apache/fedora/2016/11/21/setup-your-personal-site-from-scratch-using-linux-apache-and-jekyll/) detailing the process. Check it out! :wink:
 
 <br>

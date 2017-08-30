@@ -8,7 +8,7 @@ author: Koushtav Chakrabarty
 ---
 
 Like I promised in my
-[last post](https://fleptic.eu/fleptic/update/vps/fedora/jekyll/2016/11/13/migrating-fleptic-to-a-vps.html)
+[last post]({{ site.url }}/fleptic/update/vps/fedora/jekyll/2016/11/13/migrating-fleptic-to-a-vps/)
 , this is going to be a comprehensive tutorial to get your site up and running on a VPS. It is assumed
 that you already have root access to a VPS running Linux ready and also have registered `www.example.com`.
 If you haven't and want to, check out [DigitalOcean](https://www.digitalocean.com) for cheap a VPS and

@@ -30,3 +30,7 @@ github:
   
 plugins:
   - jemoji
+  - jekyll-font-awesome
+  
+github_username:  TheIllusionistMirage
+linkedin_username: koushtavc
