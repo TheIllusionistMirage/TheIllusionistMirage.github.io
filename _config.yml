@@ -6,14 +6,14 @@ highlighter:      pygments
 permalink:        pretty
 #relative_permalinks: true
 
-gem: [jekyll-paginate, jekyll-gists]
+gem: [jekyll-paginate, jekyll-gists, jemoji]
 
 # Setup
 title:            Fleptic
 tagline:          'My home on the internet'
 description:      'Welcome to my personal site!'
 url:              https://theillusionistmirage.github.io/
-baseurl:          /
+baseurl:          https://theillusionistmirage.github.io/
 
 author:
   name:           'Koushtav Chakrabarty'
@@ -25,5 +25,8 @@ paginate:         5
 version:          2.1.0
 
 github:
-  repo:           https://github.com/TheIllusionstMirage
-  url:            https://github.com/TheIllusionstMirage
+  repo:           https://github.com/poole/hyde
+  url:            https://theillusionistmirage.github.io
+  
+gems:
+  - jemoji

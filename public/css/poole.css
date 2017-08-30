@@ -234,6 +234,13 @@ img {
   border-radius: 5px;
 }
 
+img.emoji {
+    display: inline;
+    height: 1em;
+    width: 1em;
+    margin-bottom: 0.25em;
+}
+
 /* Tables */
 table {
   margin-bottom: 1rem;
@@ -259,8 +266,14 @@ tbody tr:nth-child(odd) th {
  */
 
 .lead {
-  font-size: 1.25rem;
+  font-size: 1.0rem;
   font-weight: 300;
+}
+
+.footer
+{
+    font-size: 0.8rem;
+    font-weight: 300;
 }
 
 
@@ -330,7 +343,7 @@ tbody tr:nth-child(odd) th {
 
 .page,
 .post {
-  margin-bottom: 4em;
+  margin-bottom: 1.5em;
 }
 
 /* Blog post or page title */
