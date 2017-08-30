@@ -8,7 +8,7 @@ author: Koushtav Chakrabarty
 ---
 In one line, the [GitHub Student Developer Pack] is awesome! Among the many fabulous things it includes, I got $50 worth of [DigitalOcean] credits, which is what I've decided to use in the coming months to host Fleptic.
 
-Currently Fleptic is being hosted on a DigitalOcean droplet (their fancy term for VPS) with 512MB RAM, 1 CPU core and 20GB harddisk space, running Fedora 24 x86_64. Apache is running the webserver and Jekyll is generating static webpages that I push using git.
+Currently Fleptic is being hosted on a DigitalOcean droplet (their fancy term for VPS) with 512MB RAM, 1 CPU core and 20GB harddisk space, running Fedora 24 x86_64. Apache is running the webserver and Jekyll is generating static webpages that I push using git.<!--break-->
 
 I'm looking forward to learning a thing or two about maintaining a server now. :smile: I will write more blog posts later documenting about how I went about setting my site up on this VPS.
 

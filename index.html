@@ -5,17 +5,28 @@ title: Home
 
 <div class="posts">
   {% for post in paginator.posts %}
-  <div class="post">
-    <h1 class="post-title">
-      <a href="{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h1>
+  <div class="post-container">
+      <div class="post-contents">
+        <h1 class="post-title">
+          <a href="{{ post.url }}">
+            {{ post.title }}
+          </a>
+        </h1>
 
-    <span class="post-date">{{ post.date | date_to_string }}</span>
+        <span class="post-date"><time>{{ post.date | date: "%b %-d, %Y" }}{% if post.author %} • {{ post.author }}{% endif %}{% if post.meta %} • {{ post.meta }}{% endif %}</time></span>        
+        {{ post.content | split:'<!--break-->' | first }}
+      </div>
 
-    {{ post.content }}
+      <div class="post-gradient">
+      </div>
   </div>
+  <div class="post-read-more">
+            <a href="{{ post.url }}">read more...</a>
+            <br><br><br>
+  </div>
+  <!--<div class="post-read-more"><a href="{{ post.url }}">read more...</a></div>
+  <br>
+  <br>-->
   {% endfor %}
 </div>
 

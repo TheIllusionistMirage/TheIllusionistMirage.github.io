@@ -14,16 +14,13 @@ that you already have root access to a VPS running Linux ready and also have reg
 If you haven't and want to, check out [DigitalOcean](https://www.digitalocean.com) for cheap a VPS and
 [NameCheap](https://www.namecheap.com) for a domain.
 
-And...
-
-...to go lashing out our linux-fu, please make sure you know the basics of some command line plaintext
+And to go lashing out our linux-fu, please make sure you know the basics of some command line plaintext
 editor such as `vi`, `emacs`, `nano`, etc :smile:
+<!--break-->
 
 <br>
 
 ### Introduction to Some Basic Terminologies
-
-_(NOTE : Advanced users may skip this section)_
 
 Before we jump into the terminal and get our hands dirty, I'd like to familiarize you with the basics of
 how a website works. Let's assume that your domain is `www.example.com`. Now, when someone types this in their
@@ -70,8 +67,6 @@ If not, then fret not and read on! :wink:
 <br>
 
 ### Making www.example.com Point to your VPS
-
-_(NOTE : Advanced users may skip this section)_
 
 To do this first go to your domain name registrar's site and access the control panel for managing your
 domain. Make it point to the nameservers of your VPS provider and then create the A records.

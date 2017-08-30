@@ -19,7 +19,7 @@ author:
   name:           'Koushtav Chakrabarty'
   url:            https://fleptic.eu
 
-paginate:         5
+paginate:         3
 
 # Custom vars
 version:          2.1.0
@@ -28,5 +28,5 @@ github:
   repo:           https://github.com/poole/hyde
   url:            https://theillusionistmirage.github.io
   
-gems:
+plugins:
   - jemoji
