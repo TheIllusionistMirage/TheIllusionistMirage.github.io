@@ -14,28 +14,28 @@ ASCII Art Generator is a lightweight image to ASCII art converter, without reduc
 *(Image copyright: http://antagonists.wikia.com/wiki/Joker_(The_Dark_Knight))*
 
 Original input: <br>
-[![Joker-1]({{site.url}}/resources/images/joker-dark-knight.jpg "Original image")]({{site.url}}/resources/images/joker-dark-knight.jpg)
+[![Joker-1]({{site.url}}/resources/images/joker-dark-knight-thumb.jpg "Original image")]({{site.url}}/resources/images/joker-dark-knight.jpg)
 
 Output: <br>
-[![Joker-2]({{site.url}}/resources/images/joker-dark-knight-ascii-art.jpg "Output")]({{site.url}}/resources/images/joker-dark-knight-ascii-art.jpg)
+[![Joker-2]({{site.url}}/resources/images/joker-dark-knight-ascii-art-thumb.jpg "Output")]({{site.url}}/resources/images/joker-dark-knight-ascii-art.jpg)
 
 Closeups: <br>
-[![Joker-3]({{site.url}}/resources/images/joker-dark-knight-closeup-I.jpg "Output")]({{site.url}}/resources/images/joker-dark-knight-closeup-I.jpg)
-[![Joker-4]({{site.url}}/resources/images/joker-dark-knight-closeup-II.jpg "Output")]({{site.url}}/resources/images/joker-dark-knight-closeup-II.jpg)
+[![Joker-3]({{site.url}}/resources/images/joker-dark-knight-closeup-I-thumb.jpg "Output")]({{site.url}}/resources/images/joker-dark-knight-closeup-I.jpg)
+[![Joker-4]({{site.url}}/resources/images/joker-dark-knight-closeup-II-thumb.jpg "Output")]({{site.url}}/resources/images/joker-dark-knight-closeup-II.jpg)
 <br>
 
 **And the eternal embodiment of gorgeousness, Scarlett Johanssen :heart:**
 
 Original input: <br>
-[![Scarlett-1]({{site.url}}/resources/images/scarlett-johansson.jpg "Output")]({{site.baseurl}}/images/scarlett-johansson.jpg)
+[![Scarlett-1]({{site.url}}/resources/images/scarlett-johansson-thumb.jpg "Output")]({{site.baseurl}}/images/scarlett-johansson.jpg)
 
 Output: <br>
-[![Scarlett-2]({{site.url}}/resources/images/scarlett-johansson-ascii-art.jpg "Output")]({{site.url}}/resources/images/scarlett-johansson-ascii-art.jpg)
+[![Scarlett-2]({{site.url}}/resources/images/scarlett-johansson-ascii-art-thumb.jpg "Output")]({{site.url}}/resources/images/scarlett-johansson-ascii-art.jpg)
 
 Closeups: <br>
-[![Scarlett-3]({{site.url}}/resources/images/scarlett-johansson-closeup-I.jpg "Output")]({{site.url}}/resources/images/scarlett-johansson-closeup-I.jpg)
-[![Scarlett-3]({{site.url}}/resources/images/scarlett-johansson-closeup-II.jpg "Output")]({{site.url}}/resources/images/scarlett-johansson-closeup-II.jpg)
-[![Scarlett-3]({{site.url}}/resources/images/scarlett-johansson-closeup-III.jpg "Output")]({{site.url}}/resources/images/scarlett-johansson-closeup-III.jpg)
+[![Scarlett-3]({{site.url}}/resources/images/scarlett-johansson-closeup-I-thumb.jpg "Output")]({{site.url}}/resources/images/scarlett-johansson-closeup-I.jpg)
+[![Scarlett-3]({{site.url}}/resources/images/scarlett-johansson-closeup-II-thumb.jpg "Output")]({{site.url}}/resources/images/scarlett-johansson-closeup-II.jpg)
+[![Scarlett-3]({{site.url}}/resources/images/scarlett-johansson-closeup-III-thumb.jpg "Output")]({{site.url}}/resources/images/scarlett-johansson-closeup-III.jpg)
 <br>
 
 ### How Does It Work?
