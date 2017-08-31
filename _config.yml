@@ -12,8 +12,8 @@ gem: [jekyll-paginate, jekyll-gists, jemoji]
 title:            Fleptic
 tagline:          'My home on the internet'
 description:      'Welcome to my personal site!'
-url:              https://theillusionistmirage.github.io/
-baseurl:          https://theillusionistmirage.github.io/
+url:              https://fleptic.eu/
+baseurl:          https://fleptic.eu/
 
 author:
   name:           'Koushtav Chakrabarty'
