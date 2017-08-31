@@ -7,4 +7,4 @@ I’m Koushtav Chakrabarty, a computer science & engineering undergrad at Asanso
 
 ### Cirriculum Vitae
 
-I'm open to job opportunities and internships. Please find my CV [here](koushtav-chakrabarty-resume.pdf).
+I'm open to job opportunities and internships. Please find my CV [here]({{ site.baseurl }}resources/cv/koushtav-chakrabarty-resume.pdf).
