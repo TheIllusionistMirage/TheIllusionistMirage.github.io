@@ -13,7 +13,7 @@ title:            Fleptic
 tagline:          'My home on the internet'
 description:      'Welcome to my personal site!'
 url:              https://theillusionistmirage.github.io/
-baseurl:          https://theillusionistmirage.github.io/
+baseurl:          https://theillusionistmirage.github.io
 
 author:
   name:           'Koushtav Chakrabarty'

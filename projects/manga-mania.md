@@ -18,7 +18,7 @@ It is written in Python3, with the generous aid of [PyQt5](https://sourceforge.n
 
 ### Screenshots
 [![Manga-Mania-1]({{site.url}}/resources/images/manga-mania-1-thumb.jpg "Search screen demo")]({{site.url}}/resources/images/manga-mania-1.png)
-[![Manga-Mania-2]({{site.url}}/resources/images/manga-mania-2-thumb.jpg "Reading a manga")]({{site.url}}/resources/images/manga-mania-2.png)
+[![Manga-Mania-2]({{site.url}}/resources/images/manga-mania-2-thumb.jpg "Reading a manga")]({{site.url}}/resources/images/manga-mania-2.jpg)
 <br>
 
 ### Source & Running Manga Mania
