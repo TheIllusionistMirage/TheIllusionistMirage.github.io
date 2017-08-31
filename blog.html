@@ -2,13 +2,12 @@
 layout: page
 title: Blog
 ---
-
+<br>
 <p>Please subscribe to my blog via <a href="{{ "/atom.xml" }}">RSS</a>!</p>
 <br>
-
 {% for post in site.posts %}
 		<!--<time>{{ post.date | date: "%b %-d, %Y" }}, by {{post.author}}</time>-->
+		<h2><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h2>
 		<time>{{ post.date | date: "%b %-d, %Y" }}{% if post.author %} • {{ post.author }}{% endif %}{% if post.meta %} • {{ post.meta }}{% endif %}</time>
-		<h3><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h3>
-		<br>		
+		<br><br>
 {% endfor %}
