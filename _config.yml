@@ -11,9 +11,15 @@ gem: [jekyll-paginate, jekyll-gists, jemoji]
 # Setup
 title:            Fleptic
 tagline:          'My home on the internet'
-description:      'Welcome to my personal site!'
+description:      '$ sudo apt-get reckt'
+
+# Deployment URL values
 url:              https://fleptic.eu/
 baseurl:          https://fleptic.eu/
+
+# Dev URL values
+#url:              "/fleptic/"
+#baseurl:          "/"
 
 author:
   name:           'Koushtav Chakrabarty'
@@ -27,11 +33,11 @@ version:          2.1.0
 #github:
 #  repo:           https://github.com/poole/hyde
 #  url:            https://theillusionistmirage.github.io
-  
+
 plugins:
   - jemoji
   - jekyll-font-awesome
-  
+
 github_username:  TheIllusionistMirage
 linkedin_username: koushtavc
 email: koushtavc@gmail.com

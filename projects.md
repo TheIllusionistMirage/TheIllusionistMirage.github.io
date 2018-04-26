@@ -6,7 +6,7 @@ title: Projects
 
 ## Manga Mania
 <br>
-![Manga Mania]({{ site.url }}/resources/images/manga-mania-logo.png "<anga Mania - A lightweght manga reader")
+![Manga Mania]({{ site.url }}/resources/images/manga-mania-logo.png "Manga Mania - A lightweght manga reader")
 
 Manga Mania is a lightweight manga reader for reading manga from [MangaFox](http://mangafox.me/) right on your desktop.
 
