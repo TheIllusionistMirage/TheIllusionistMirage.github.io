@@ -10,6 +10,7 @@ author: Koushtav Chakrabarty
 A few weeks ago I started a small side project - implement the JPEG specification. Though naive, [my attempt](https://github.com/TheIllusionistMirage/libKPEG) was surprisingly fruitful and I managed to get a simple decoder working! But it wasn't easy; I had to read through the serious & technical specification of JPEG (really hurt my tiny brain) and spent many hours debugging stuff. So, I decided to document my process so that if someone like me ever decides to implement JPEG, but need hand holding in each and every step along the way, they have nothing to worry about! :sunglasses: (That is, imagining that someone even visits this blog). Also, this blog was kinda dead and bare, so I guess I needed more content anyway.
 
 Before we delve into the details, let me set one thing clear: this is a tutorial for aimed at innocent n00bs like me. As a result, I tend to limit the discussion to the point of interest, while trying to explain things as nicely as I can. So, it may or may not be perfect. You're welcome to critic/suggest/discuss in the comments thread below :wink:
+<!--break-->
 
 ### What Exactly is Covered Here?
 
@@ -35,8 +36,6 @@ For starters, the term _image compression_ refers to a set of steps, that an
 algorithm takes in order to churn out a modified version of the input image in such a way that:
 * the __size__ (size on disk, not to be consfused with resolution or image dimensions) of the output image is as small as possible.
 * there is __minimum or no loss__ of visual __quality__ and image data.
-
-<!--break-->
 
 These are the two main factors that determine _how good_ the image compression technique is. It's important to keep in mind that like everything else, there's no such thing as the _ultimate image compression algorithm_. Which algorithm to use is totally dependent upon the need of the user. For example, JPEG, which is the focus of this post, is good for compressing raw images of natural scenes, which have smooth, gradual variations of color, and it is unsuitable for images with sharp contrasts. Also, JPEG compression is _lossy_, meaning that depending upon the compression quality, some amount of the original imagedata is thrown away, forever, to reduce the file size. On the other hand, there's PNG, which is a _lossless_ mode of image compression, meaning, it is guaranteed that all image data from the input can be restored back when decoding an image compressed using PNG. But since it has to store _all_ original image data, it results in file sizes that are typically larger than the ones done using JPEG. Both JPEG and PNG work on two dimensional images. There are some image formats like DICOM, which can store accurate 3D images. Hence, DICOM is extremely popular in the medical community for storing medical data of CT scans, MRIs, etc. Since accuracy and correctness are crucial in this case, the corresponding file sizes are much larger than JPEG or PNG.
 
