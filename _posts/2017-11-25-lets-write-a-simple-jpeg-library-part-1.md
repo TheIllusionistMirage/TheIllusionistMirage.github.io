@@ -7,9 +7,9 @@ comments: true
 author: Koushtav Chakrabarty
 ---
 
-A few weeks ago I started a small side project - implement the JPEG specification. Though naive, [my attempt](https://github.com/TheIllusionistMirage/libKPEG) was surprisingly fruitful and I managed to get a simple decoder working! But it wasn't easy; I had to read through the serious & technical specification of JPEG (really hurt my tiny brain) and spent many hours debugging stuff. So, I decided to document my process so that if someone like me ever decides to implement JPEG, but need hand holding in each and every step along the way, they have nothing to worry about! :sunglasses: (That is, imagining that someone even visits this blog). Also, this blog was kinda dead and bare, so I guess I needed more content anyway.
+A few weeks ago I started a small side project - implement the JPEG specification. Though naive, [my attempt](https://github.com/TheIllusionistMirage/libKPEG) was surprisingly fruitful and I managed to get a simple decoder working! But it wasn't easy; I had to read through the serious & technical specification of JPEG and spent many hours debugging stuff. So, I decided to document my process so that if someone like me ever decides to implement JPEG, they have nothing to worry about! :sunglasses: (That is, imagining that someone even visits this blog). Also, this blog was kinda dead and bare, so I guess I needed more content anyway.
 
-Before we delve into the details, let me set one thing clear: this is a tutorial for aimed at innocent n00bs like me. As a result, I tend to limit the discussion to the point of interest, while trying to explain things as nicely as I can. So, it may or may not be perfect. You're welcome to critic/suggest/discuss in the comments thread below :wink:
+Before we delve into the details, let me set one thing clear: this is a tutorial for aimed at beginners like myself. As a result, I tend to limit the discussion to the point of interest, while trying to explain things as nicely as I can. So, it may or may not be perfect. You're welcome to critic/suggest/discuss in the comments thread below :wink:
 <!--break-->
 
 ### What Exactly is Covered Here?
