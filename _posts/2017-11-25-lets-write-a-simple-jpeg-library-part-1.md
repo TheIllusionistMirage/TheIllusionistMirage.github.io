@@ -29,7 +29,7 @@ In layman terms, a digital image is a 2D array whose elements are pixels. The pi
 ![Illustration-1]({{site.url}}/resources/images/illustration-1.jpg "An illustration of a digital image")
 __Figure-1:__ _A close up of the RGB pixels (**Image "Lenna" borrowed from Wikipedia**)_
 
-<br><br>
+<br>
 
 ## What is Image Compression?
 
