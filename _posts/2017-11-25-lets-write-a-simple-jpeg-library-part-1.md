@@ -35,7 +35,7 @@ __Figure-1:__ _A close up of the RGB pixels (**Image "Lenna" borrowed from Wikip
 
 For starters, the term _image compression_ refers to a set of steps, that an
 algorithm takes in order to churn out a modified version of the input image in such a way that:
-* the __size__ (size on disk, not to be consfused with resolution or image dimensions) of the output image is as small as possible.
+* the __size__ (size on disk, not to be confused with resolution or image dimensions) of the output image is as small as possible.
 * there is __minimum or no loss__ of visual __quality__ and image data.
 
 These are the two main factors that determine _how good_ the image compression technique is. It's important to keep in mind that like everything else, there's no such thing as the _ultimate image compression algorithm_. Which algorithm to use is totally dependent upon the need of the user. For example, JPEG, which is the focus of this post, is good for compressing raw images of natural scenes, which have smooth, gradual variations of color, and it is unsuitable for images with sharp contrasts. Also, JPEG compression is _lossy_, meaning that depending upon the compression quality, some amount of the original imagedata is thrown away, forever, to reduce the file size. On the other hand, there's PNG, which is a _lossless_ mode of image compression, meaning, it is guaranteed that all image data from the input can be restored back when decoding an image compressed using PNG. PNG results in much lower file sizes for compressing sharp contrast, e.g., images of text, which JPEG is bad at handling. Both JPEG and PNG work on two dimensional images. There are some image formats like DICOM, which can store accurate 3D images. Hence, DICOM is extremely popular in the medical community for storing medical data of CT scans, MRIs, etc. Since accuracy and correctness are crucial in this case, the corresponding file sizes are much larger than JPEG or PNG.
@@ -45,14 +45,14 @@ So, it's all a matter of trade offs and necessities that determines which compre
 
 ## Getting Started With JPEG
 
-JPEG stands for __Joint Phographic Experts Group__, which develops this image compression technique and specifies the official standard, [ITU-T.81](https://www.w3.org/Graphics/JPEG/itu-t81.pdf), which is implemented by all JPEG libraries. At this point I would like to add that JPEG is the compression technique itself: it just specifies the steps for encoding and decoding. The actual file format for storing the images compressed using JPEG is specified in the JFIF and EXIF standards. They define how the compressed image data is to be stored in a file for exchanging and storing the compressed images.
+JPEG stands for __Joint Photographic Experts Group__, which develops this image compression technique and specifies the official standard, [ITU-T.81](https://www.w3.org/Graphics/JPEG/itu-t81.pdf), which is implemented by all JPEG libraries. At this point I would like to add that JPEG is the compression technique itself: it just specifies the steps for encoding and decoding. The actual file format for storing the images compressed using JPEG is specified in the JFIF and EXIF standards. They define how the compressed image data is to be stored in a file for exchanging and storing the compressed images.
 <br><br>
 
 ## The Heart of JPEG Compression
 
 Now we're perhaps at the most important part of this post. Now, I'm going to describe _why_ JPEG achieves such great compression. Instead of dealing with the pixels in the the RGB color space, JPEG converts them to the \\(YC_bC_r\\) color space. The \\(YC_bC_r\\) color space has three components per pixel: the luminance, or the brightness of the pixel, \\(Y\\), the amount of blue in the pixel, \\(C_b\\), and, the amount of red in the pixel, \\(C_r\\). The \\(Y\\) component is called the __luma__ component and \\(C_b\\) and \\(Cr\\) are known as the __chroma__ components.
 
-The benefit in doing this color space conversion is because of how human eyes work. The retina of a eye has two major types of photoreceptors, _rods_ and _cones_. The rods are sensitive to the lumosity of light and the cones to the color. And the number of rods in the retina massively outnumber the number of cones. As a result, a human eye is able to tell apart light intensity better than they can discriminate between colors. So, our eyes are more sensitive of small variations of low frequency over a large area than to high frequency variations in the same area. As we will later see, that JPEG drops the high frequncy data of the image and stores only the small frequency variations with greater accuracy, resulting in reduced file size. Apart from these two things, JPEG also employs things like Huffman coding as we shall later see, to achieve even more reduction!
+The benefit in doing this color space conversion is because of how human eyes work. The retina of a eye has two major types of photoreceptors, _rods_ and _cones_. The rods are sensitive to the brightness of light and the cones to the color. And the number of rods in the retina massively outnumber the number of cones. As a result, a human eye is able to tell apart light intensity better than they can discriminate between colors. So, our eyes are more sensitive of small variations of low frequency over a large area than to high frequency variations in the same area. As we will later see, that JPEG drops the high frequncy data of the image and stores only the small frequency variations with greater accuracy, resulting in reduced file size. Apart from these two things, JPEG also employs things like Huffman coding, to achieve even more reduction!
 
 So, in a nutshell, the JPEG exploits the fact that the human eye isn't perfect!
 <br><br>
@@ -70,7 +70,7 @@ Cr = 0.5 * R - 0.4187 * G - 0.0813 * B + 128 \\$$
 
 ### Step #2: Chroma Subsampling
 
-We already know that the human eye is better at dealing with the brightness or lumosity than the colors. So, the separation of the luma (\\(Y\\)) and chroma (\\(C_b\\) & \\(C_r\\)) components enables us to _throw away_ some of the information relating to the color, without significant loss of visual quality of the image that can be distinguished by the naked eye. So, what JPEG says is that, _"take only `x` \\(C_b\\) & \\(C_r\\) values for every `y` of them"_. Basically, we keep the luma component of each and every pixel, but only keep the chroma components once for every few pixels.
+We already know that the human eye is better at dealing with the brightness or luminescence than the colors. So, the separation of the luma (\\(Y\\)) and chroma (\\(C_b\\) & \\(C_r\\)) components enables us to _throw away_ some of the information relating to the color, without significant loss of visual quality of the image that can be distinguished by the naked eye. So, what JPEG says is that, _"take only `x` \\(C_b\\) & \\(C_r\\) values for every `y` of them"_. Basically, we keep the luma component of each and every pixel, but only keep the chroma components once for every few pixels.
 <br><br>
 
 ### Step #3: Level Shifting
@@ -82,7 +82,7 @@ Since JPEG allows only 8 bits per channel, the values of the \\(Y\\), \\(C_b\\) 
 
 Now begins the fun part of the compression procedure. Instead of just processing the \\(YC_bC_r\\) pixels directly, they are converted to their [spatial frequencies](http://www.ucalgary.ca/pip369/mod4/spatial/frequency1). 
 
-Given a signal that is a function of time, it can be decomposed into sinusoidal components of varying frequencies that make it up. Some of you may have heard about [Fourier transform](https://en.wikipedia.org/wiki/Fourier_transform), which is one of the frequency transforms that can do this. [DCT](https://en.wikipedia.org/wiki/Discrete_cosine_transform) is a Fourier related frequency transform, which is what JPEG uses. DCT allows us express a sequence of discrete data elements in terms of sum of different frequencies.
+Given a signal that is a function of time, it can be decomposed into sinusoidal components of varying frequencies that make it up. Some of you may have heard about [Fourier transform](https://en.wikipedia.org/wiki/Fourier_transform), which is one of the frequency transforms that can do this. [DCT](https://en.wikipedia.org/wiki/Discrete_cosine_transform) is a Fourier related frequency transform, which is what JPEG uses. DCT allows us to express a sequence of discrete data elements in terms of sum of different frequencies.
 
 ![Illustration-2]({{site.url}}/resources/images/illustration-2.jpg "Spatial frequency domain")
 __Figure-2:__ _Frequencies that are used to compose an MCU (we will see what this means in a moment). The ones to the top-left have lower frequencies than the ones closer to bottom-right. (__Image borrowed from Wikipedia__)_
@@ -164,7 +164,7 @@ _(Note that if we take the IDCT of the above MCU and then restore the level shif
 
 ### Step #5: Quantization
 
-After performing the spatial frequency transformation, it can be seen that the magnitude of the top left coefficients are rather large, and that of the first coefficient is the largest. The top-left entries corsspond to low frequency changes, that we are good at observing, and as we move towards the bottom right, the changes are less obvious to our eyes.
+After performing the spatial frequency transformation, it can be seen that the magnitude of the top left coefficients are rather large, and that of the first coefficient is the largest. The top-left entries coresspond to low frequency changes, that we are good at observing, and as we move towards the bottom right, the changes are less obvious to our eyes.
 
 And like we already discussed, this flaw is expoloited by JPEG by throwing away a majority of the high frequency variations. Also, if you look more closely, you will observe that if we somehow rounded off these high frequency coefficients to zero, it wouldnot have _much effect_ on the overall visual quality. Hence, what we do for each transformed MCU is that we __quantize__ them. A __quantization matrx__ is used for the quantization, which consists of 8x8 coefficients, denoting _"how much"_ each coefficient has an importance in the overall MCU. The higher the effect, the lower the value of constant used for quantizing it.
 
@@ -210,14 +210,16 @@ $$
 \end{bmatrix}
 $$
 
-As you can see, after quantization, much of the bottom-right entries have become zero. And this is the key to the next step of entropy coding.
+As you can see, after quantization, most of the bottom-right entries have become zero. And this is the key to the next step of entropy coding.
 <br><br>
 
 ### Step #6: Entropy Coding
 
 The entropy coding step consists of grouping coefficients of similar fequencies together by ordering the 64 coefficients in the 8x8 MCU in a zig-zag manner, and then performing [run-length encoding](https://en.wikipedia.org/wiki/Run-length_encoding) on the 64 element vector so obtained. Then this run-length encoded data is encoded using Huffman coding to furthur reduce the amount of bytes they take. This step is better explained with a practical example rather than just words.
 
-The order of traversal of elements in the zig-zag manner is as follows:
+#### Zig-Zag Traversal of MCU
+
+First we do the zig-zag traversal of the MCU and convert it to a vector of 64 elements. The order of traversal of elements in the zig-zag manner is as follows:
 
 $$
 \begin{bmatrix}
@@ -232,11 +234,15 @@ $$
 \end{bmatrix}
 $$
 
+Here, each element corresponds to it's position in the traversal.
+
 Let's get back to the example MCU we were encoding. It's zig-zag traversal is:
 
 $$
 -30, 2, -5, 0, -2, 1, -2, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,\\ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 $$
+
+#### Run-Length Encoding
 
 It is important to state here that the first coefficient, -30, also called the DC coefficient will not be encoded using run-length coding like the remaining 63 coefficients, also called the AC coefficients. It's hard to explain _why_ immediately, but it will become clear in the subsequent steps. For now, just bear in mind that the run-length encoding step applies only to the 63 AC coefficients.
 
@@ -340,4 +346,4 @@ To sum up what we covered in this post:
 * What is JPEG.
 * Brief overview of each step involved in JPEG encoding/decoding.
 
-In the next part, we will get our hands dirty and shall start writing a JPEG decoder in C++ (yay! :smile:). You are free to follow along in your language of choice as understanding the steps is all that's required.
+In the next part, we will get our hands dirty and start writing a JPEG decoder in C++ (yay! :smile:). You are free to follow along in your language of choice as understanding the steps is all that's required.
